@@ -53,13 +53,13 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
 FOREIGN KEY (musica_id) REFERENCES musicas(musica_id)
 )ENGINE=InnoDB;
 
-INSERT INTO planos (plano, valor_plano) VALUES
+INSERT INTO SpotifyClone.planos (plano, valor_plano) VALUES
 ('gratuito', 0.00),
 ('familiar', 7.99),
 ('universitario', 5.99),
 ('pessoal', 6.99);
 
-INSERT INTO usuarios (nome_usuario, idade, data_assinatura, plano_id) VALUES
+INSERT INTO SpotifyClone.usuarios (nome_usuario, idade, data_assinatura, plano_id) VALUES
 ('Thati', 23, '2019-10-20', 1),
 ('Cintia', 35, '2017-12-30', 2),
 ('Bill', 20, '2019-06-05', 3),
@@ -71,7 +71,7 @@ INSERT INTO usuarios (nome_usuario, idade, data_assinatura, plano_id) VALUES
 ('Angelina', 42, '2018-04-29', 2),
 ('Paul', 46, '2017-01-17', 2);
 
-INSERT INTO artistas (nome_artista) VALUES
+INSERT INTO SpotifyClone.artistas (nome_artista) VALUES
 ('Walter Phoenix'),
 ('Peter Strong'),
 ('Lance Day'),
@@ -79,7 +79,7 @@ INSERT INTO artistas (nome_artista) VALUES
 ('Tyler Isle'),
 ('Fog');
 
-INSERT INTO seguindo_artistas (usuario_id, artista_id) VALUES
+INSERT INTO SpotifyClone.seguindo_artistas (usuario_id, artista_id) VALUES
 (1, 1),
 (1,	4),
 (1,	3),
@@ -103,7 +103,7 @@ INSERT INTO seguindo_artistas (usuario_id, artista_id) VALUES
 (10, 2),
 (10, 6);
 
-INSERT INTO albuns (titulo, artista_id, ano_lancamento) VALUES
+INSERT INTO SpotifyClone.albuns (titulo, artista_id, ano_lancamento) VALUES
 ('Envious',	1, 1990),
 ('Exuberant', 1, 1993),
 ('Hallowed Steam', 2, 1995),
@@ -115,7 +115,7 @@ INSERT INTO albuns (titulo, artista_id, ano_lancamento) VALUES
 ('No guarantees', 5, 2015),
 ('Apparatus', 6, 2015);
 
-INSERT INTO musicas (album_id, nome_musica, duracao) VALUES
+INSERT INTO SpotifyClone.musicas (album_id, nome_musica, duracao) VALUES
 (1,	'Soul For Us', 200),
 (1,	'Reflections Of Magic',	163),
 (1,	'Dance With Her Own', 116),
@@ -157,7 +157,7 @@ INSERT INTO musicas (album_id, nome_musica, duracao) VALUES
 (10, 'Baby', 136),
 (10, 'You Make Me Feel So..', 83);
 
-INSERT INTO historicos (usuario_id, musica_id, data_reproducao) VALUES
+INSERT INTO SpotifyClone.historicos (usuario_id, musica_id, data_reproducao) VALUES
 (1,	36,	'2020-02-28 10:45:55'),
 (1,	25,	'2020-05-02 05:30:35'),
 (1,	23,	'2020-03-06 11:22:33'),
@@ -196,6 +196,7 @@ INSERT INTO historicos (usuario_id, musica_id, data_reproducao) VALUES
 (10, 21, '2017-12-04 05:33:43'),
 (10, 12, '2017-07-27 05:24:49'),
 (10, 13, '2017-12-25 01:03:57');
+
 
 
 
